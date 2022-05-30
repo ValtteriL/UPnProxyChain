@@ -45,10 +45,19 @@ optional arguments:
   -v, --verbose         increase output verbosity
 ```
 
-### Proxying
+### Proxying through single host
 ```
 # start proxy
 ./upnproxychain.py <IP>
+
+# use the proxy to curl example.com
+curl socks5h://localhost:1080 http://example.com
+```
+
+### Proxying through multiple hosts
+```
+# start proxy
+./upnproxychain.py <IP1> <IP2> <IP3> <IP4> <IP5>
 
 # use the proxy to curl example.com
 curl socks5h://localhost:1080 http://example.com
